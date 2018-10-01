@@ -11,7 +11,7 @@ All the necessary IAM access to Kinesis stream should be there (on IAM user or r
 - Consumes data from a kinesis stream's all shards and prints data and corresponding ShardId to the console.
 - We can pull data based on ShardIteratorType[line#12 in the consumer.js] (it could be all data in stream, since timestamp etc.)  
 - We can consume data from selected ShardId [line#24 in the consumer.js]
-- This is not a contineous running consumer. We can run it contineously using ShardIteratorType='AFTER_SEQUENCE_NUMBER', in that case we can use dynamodb to store latest SEQUENCE_NUMBER from last fetch.
+- This is not a continuous running consumer. We can run it continuously using ShardIteratorType='AFTER_SEQUENCE_NUMBER', in that case we can use dynamodb to store latest SEQUENCE_NUMBER from last fetch.
  
 
 
